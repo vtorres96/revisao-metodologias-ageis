@@ -1,14 +1,14 @@
 Equipe de desenvolvimento é baseada em alguns integrantes:
-  - SM (Scrum Master)
-  - PO (Product Owner)
-  - Dev Team (Time de Desenvolvimento)
+  - SM (Scrum Master) 1 por equipe
+  - PO (Product Owner) 1 PO por equipe 
+  - Dev Team (Time de Desenvolvimento) no mínimo 3 até 5 desenvolvedores sendo 1 deles o LT Líder Ténico (Tech Lead)
 
 
 PO (Product Owner - Dono do Produto)
   um integrante da equipe que tem a responsabilidade de fazer reuniões com a área de negócios
   para definição de regras de negócio, ou, até mesmo alinhamentos de escopo de algum projeto,
   e, efetua reuniões com o usuário a fim entender quais são as prioridades, e, 
-  o que o usuário pretende que seja desenvolvido de acordo com a prioridade,
+  o que o usuário pretende que seja desenvolvido de acordo com a necessidade e prioridade do usuário,
   e até mesmo sobre novas features / atualização destas features, correções de bugs.
 
 
@@ -22,6 +22,7 @@ PO (Product Owner - Dono do Produto)
   de errado desde um simples login, até mesmo a outras situações, alguém
   que atua na empresa IFood entrará em contato com alguém da empresa Cubos,
   logo, este funcionário do IFood que entra em contato é considerado "usuário".
+  
   Mas, também podemos considerar como "usuários" funcionários da nossa própria empresa,
   e que operam no sistema, ou seja, utilizam o sistema no dia a dia.
   Vamos imaginar a seguinte a situação, um funcionário da Americanas, possui acesso a uma 
@@ -29,6 +30,24 @@ PO (Product Owner - Dono do Produto)
   e abre um chamado relacionado ao problema na qual se deparou, ele acaba tornando-se o "cliente"
   que foi quem abriu determinada demanda, para que depois,
   a equipe de desenvolvimento efetua a análise e atua no problema trazendo a solução.
+
+
+Scrum Master
+Fica responsável por remover obstáculos que possam impedir a equipe de desenvolvimento
+Está sempre alinhando prazos de entrega com a equipe, e, 
+buscar controlar o tempo das reuniões a fim de não exceder muito os tempos programados
+Em resumo: controla horários de determinadas cerimônias, remove obstáculos, o que seria remover
+obstáculos, podemos colocar em pauta, quando algum usuário tenta entrar em contato diretamente
+com o desenvolvedor efetuando solicitações, logo, o desenvolvedor, leva para o Scrum Master ou PO,
+e eles colocam na fila de prioridades.
+
+Esse cenário abaixo é o único que não conseguimos controlar
+Top -> Down - De cima para baixo
+Demanda Top Down -> chefe da TI e passa uma demanda para gente resolver o quanto antes
+
+Dev Team (Equipe de Desenvolvimento)
+Fica responsável por desenvolver as tarefas e tirá-las do "papel", 
+resolver problemas / bug que possam surgir / desenvolvendo novos projetos
 
 
 Como surge uma demanda para a equipe e quais etapas são efetuadas até a entrega da demanda
@@ -40,31 +59,27 @@ placa, modelo, fabricante, peso
 Após as definições junto com a área de negócios, o PO criará uma "estória" para que algum 
 desenvolvedor possa dar início e desenvolver uma tela contendo um formulário com os seguintes 
 campos: placa, modelo, fabricante, peso.
-E também o endpoint no backend.
+E também o endpoint no backend que salvará os dados vindos do formulário.
 Podemos considerar que a "estória" terá os critérios de aceite, ou seja, quais comportamentos iremos
 implementar na tela, como por exemplo:
   - as mensagens de validação que retornaremos
   - validar se a placa informada é duplicada antes de inserir o registro no BD
   - Retornar mensagem "Veículo cadastrado com sucesso" após cadastrar o veículo
 
-
-Scrum Master
-Fica responsável por remover obstáculos que possam impedir a equipe de desenvolvimento
-Busca controlar o tempo, sempre alinhando prazos de entrega com a equipe, e, 
-buscar controlar o tempo das reuniões a fim de não exceder muito os tempos programados
-Em resumo: controla horários de determinadas cerimônias, remove obstáculos, o que seria remover
-obstáculos, podemos colocar em pauta, quando algum usuário tenta entrar em contato diretamente
-com o desenvolvedor efetuando solicitações, logo, o desenvolvedor, leva para o Scrum Master ou PO,
-e eles colocam na fila de prioridades.
-
-
-Dev Team (Equipe de Desenvolvimento)
-Fica responsável por desenvolver as tarefas e tirá-las do "papel", 
-resolver problemas / bug que possam surgir
+UX/UI - User Experience / User Interface -> documenta etapas de determinados processos
+além de arquitetar uma idéia para o frontend, em questão de novas telas
+criar uma tabela entitulada como veiculos, nessa tabela deveremos ter as colunas:
+  - placa
+  - modelo
+  - fabricante
+  - peso
+quais são obrigatórios ?
+existe alguma validação específica além de validar se o campo não foi preenchido?
+Por exemplo: rg, cpf, cnpj...
 
 ---------------- Cerimônias ----------------
 
-Product Backlog (Lista de tarefas / demandas)
+Product Backlog (Lista de tarefas a fazer / demandas que estão preparadas para que o dev atue)
   Conjunto de requisitos (conjunto de tarefas) que deveremos implementar no projeto, 
   são as tarefas criadas no Product Backlog que depois acabam compondo uma nova Sprint.
 
@@ -82,21 +97,23 @@ Sprints - Ciclos
     aumentar ou diminuir o tempo da sprint, por exemplo, de 15 dias para 21 dias ou diminuir de 21 dias para 15 dias
   Como definimos quando acabamos todas as atividades antes de uma sprint encerrar-se ?
     Pegar nova tarefa que consiga iniciar o desenvolvimento ainda na sprint atual
-  Temos duas situações o caminho feliz e o triste de uma sprint, vamos falar sobre eles...
-  Caminho Feliz - Finalizar todas as demandas dentro do prazo da sprint
-  Caminho Triste - Não conseguir finalizar todas demandas a tempo dentro do prazo da sprint,
-  e, ter que transbordar as tarefas, ou seja, adicionar as tarefas que não foram concluídas,
-  para a Sprint Posterior.
-Sprint Backlog
-  Etapa de definição de quais tarefas serão realizadas dentro de uma sprint
+    Temos duas situações o caminho feliz e o triste de uma sprint, vamos falar sobre eles...
+    Caminho Feliz - Finalizar todas as demandas dentro do prazo da sprint
+    Caminho Triste - Não conseguir finalizar todas demandas a tempo dentro do prazo da sprint,
+    e, ter que transbordar as tarefas, ou seja, adicionar as tarefas que não foram concluídas,
+    para a Sprint Posterior.
+
+Sprint Backlog (Termo utilizado para o levantamento de requisitor)
+  Etapa de definição de quais requisitos são/serão necessários para concluir
+  as tarefas que serão realizadas dentro de uma sprint.
   (geralmente definido por Product Owner e Dev Team, mas, em algumas situações
-  quem define é o Product Owner com a Área de Negócios)
+  quem define o que é prioritário é o Product Owner com a Área de Negócios)
 
-Planning - Planejamento
+Planning - Planejamento (é comum que ocorra a Sprint Backlog nessa cerimônia)
   Momento onde PO, Scrum Master e Dev Team se reúnem para definir quais serão as tarefas
-  que irã compor uma nova sprint.
+  que irã compor uma nova sprint. É resumidamente, a cerimônia que origina uma sprint.
 
-Como pontuamos dificuldade e esforço aplicado nas demandas:
+Como pontuamos dificuldade e esforço aplicado nas demandas (etapa que ocorre na Sprint Backlog):
 e o critério utilizado em algumas equipes é o critério da sequência de Fibonacci
 Por exemplo:
   Temos três desenvolvedores em uma equipe e cada um tem um nível, sendo:
@@ -104,18 +121,18 @@ Por exemplo:
   Ao analisar uma determinada demanda, os três vão dar palpite de quanto tempo imaginam
   que podem gastar para solucionar essa determinada demanda, imagine que:
   O desenvolvedor Júnior palpita que será gasto 10h,
-  O desenvolvedor Pleno palpita que será gasto 6h,
-  O desenvolvedor Sênior palpita que será gasto 5h,
+  O desenvolvedor Pleno palpita que será gasto 18h,
+  O desenvolvedor Sênior palpita que será gasto 3h,
   Logo, a pontuação de dificuldade / esforço atribuído para aquela determinada demanda,
   será de consenso da equipe como um todo, logo, se chegarem em acordo podem colocar X horas.
-  3 pontos equivalem a 6 horas
+  3 desenvolvedores julgam que a determinada demanda equivale a 8 horas investidas
 
 Daily - Reunião Diária (Exclusiva dos desenvolvedores)
 Quem participa dessa reunião diária são: Dev Team e Scrum Master
 Reunião que é feita a fim de toda equipe de desenvolvimento passar um feedback de que 
 ponto determinado está em uma tarefa específica, ou seja, nesta reunião os desenvolvedores
 tem a oportunidade de citar se estão com algum impedimento para concluir a tarefa, ou, até 
-mesmo se estão conseguindo progredir sem impeditivos.
+mesmo se estão conseguindo progreir sem impeditivos.
 Obs: esta reunião deve durar no máximo 15 minutos, pois, é uma reunião apenas de reporte
 do que foi feito no dia anterior e qual o seu plano para o dia atual
 
@@ -123,7 +140,9 @@ Sprint Review (Geralmente falam apenas Review)
   Reunião para pontuar o que foi bacana e o que foi ruim dentro da sprint atual,
   ou seja, através dela começamos a analisar de forma mais bacana as entregas, e,
   que a equipe começa a ter um "tato" para planejar melhor as tarefas
-  e consequentemente as entregas
+  e consequentemente as entregas.
+  Geralmente, definimos planos de ação para a próxima sprint, focando, em eliminar/reduzir
+  problemas que ocorreram na sprint atual
   Obs: ocorre geralmente junto com a Retro (não é um caso obrigatório)
 
 Sprint Retro
@@ -133,13 +152,18 @@ Sprint Retro
 
 O que ocorre caso não cumpra o prazo de entrega da minha tarefa dentro de uma sprint ?
   10 tarefas para realizar na sprint 1, se conclui apenas 9, a tarefa que estou atuando
-  naquele momento em que a sprint se encerrou, irá "transbordar" para a sprint 2
+  naquele momento em que a sprint se encerrou, irá "transbordar" para a sprint 2 e seguimos
+  durante a sprint 2 trabalhando nela, porém, focados em terminar o quanto antes, pois,
+  o prazo já foi extendido
 
 Scrum Board
   Podemos considerar que é um painel de gestão de tarefas, através dele, conseguimos saber:
   - quais tarefas estão compondo a sprint
   - quais tarefas ainda não foram executadas (To Do - A fazer)
-  - quais tarefas estão sendo executadas naquele momento (Doing - Fazendo)
-  - quais tarefas foram concluídas (Done - Finalizadas)
+  - quais tarefas estão sendo executadas naquele momento (Doing - Em Progresso)
+  - quais tarefas foram concluídas (Done - Concluídas / Finalizadas)
   - qual desenvolvedor está com determinada tarefa
 
+Jira, Trello, GitHub Projects
+
+To do - a fazer | Doing - Em Progresso | Done - Concluídas / Finalizadas
